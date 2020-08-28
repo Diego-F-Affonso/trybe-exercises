@@ -1,4 +1,4 @@
-let numero1 = 12
+let numero1 = (12, 22)
 let numero2 = 32
 let numero3 = 10
 
