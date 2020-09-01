@@ -1,0 +1,8 @@
+internet
+unix
+bash
+controle
+mouse
+teclado
+borracha
+lapis
