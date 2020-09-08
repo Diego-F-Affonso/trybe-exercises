@@ -91,6 +91,19 @@
         CriarPChildCenterContent("Algum Texto");
 
         criarDivBody("left-content");
+        criarDivBody("right-content");
+
+        let leftContent = document.querySelector("div.left-content");
+
+        function imageLeftContent(classe, src){
+            let img = document.createElement("img")
+            img.className = classe
+            img.src = src
+            leftContent.appendChild(img)
+        }
+
+        imageLeftContent("small-image", "https://picsum.photos/200");
+
         
     </script>
   </body>
