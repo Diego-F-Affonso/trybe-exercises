@@ -62,10 +62,23 @@
         titulo.innerText = "Exercicio 5.2 - JavaScript DOM"
         body.appendChild(titulo)
         
-        let div = document.createElement("div")
-        div.className = "main-content"
-        body.appendChild(div)
-        
+        function criarDivBody(classe){
+            let div = document.createElement("div")
+            div.className = classe
+            body.appendChild(div)
+        }
+
+        criarDivBody("main-content");
+
+        let mainContent = document.querySelector("div.main-content");
+
+        function criarDivChildDiv(classe){
+            let div = document.createElement("div"); 
+            div.className = classe
+            mainContent.appendChild(div)
+        }
+
+        criarDivChildDiv("center-content");
     </script>
   </body>
 </html>
