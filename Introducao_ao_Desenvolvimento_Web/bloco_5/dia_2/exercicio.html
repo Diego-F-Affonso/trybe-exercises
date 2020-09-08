@@ -72,13 +72,23 @@
 
         let mainContent = document.querySelector("div.main-content");
 
-        function criarDivChildDiv(classe){
+        function criarDivChildMainContent(classe){
             let div = document.createElement("div"); 
             div.className = classe
             mainContent.appendChild(div)
         }
 
-        criarDivChildDiv("center-content");
+        criarDivChildMainContent("center-content");
+
+        let centerContent = document.querySelector("div.center-content");
+
+        function CriarPChildCenterContent(texto){
+            let p = document.createElement("p");
+            p.innerText = texto;
+            centerContent.appendChild(p);
+        }
+
+        CriarPChildCenterContent("Algum Texto");
     </script>
   </body>
 </html>
