@@ -126,6 +126,16 @@
         criarItensLista("nove");
         criarItensLista("dez");
     
+        function criarSubTitulosH3(nome){
+            let h3 = document.querySelector("div.main-content");
+            let subTitulo = document.createElement("h3");
+            subTitulo.innerText = nome;
+            h3.appendChild(subTitulo)
+        }
+
+        criarSubTitulosH3("teste")
+        criarSubTitulosH3("teste2")
+        criarSubTitulosH3("teste3")
     </script>
   </body>
 </html>
