@@ -136,6 +136,24 @@
         criarSubTitulosH3("teste")
         criarSubTitulosH3("teste2")
         criarSubTitulosH3("teste3")
+
+        let tagH1 = document.querySelector("body h1");
+        tagH1.className = "title"
+
+        let tagH3 = document.querySelectorAll(".main-content h3");
+        for (index in tagH3){
+          tagH3[index].className = "description"
+        }
+
+        body.removeChild(leftContent);
+
+        rightContent.style.marginRight = "auto"
+
+        centerContent.style.backgroundColor = "green"
+
+        let ultimoFilho = listaNaoOrdenada.lastChild;
+        listaNaoOrdenada.removeChild(ultimoFilho);
+    
     </script>
   </body>
 </html>
