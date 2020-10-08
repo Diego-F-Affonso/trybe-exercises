@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Monte o seu Currículo.</title>
+    <link rel="stylesheet" type="text/css" href="style.css" media="screen">
+</head>
+<body>
+    <header>
+        <h1>Currículo</h1>
+    </header>
+    <form action="" method="get">
+        <fieldset>
+            <div class="campos">
+                <label for="nome">Nome:</label>
+                <input type="text" required="required" name="nome" maxlength="40">
+            </div>
+            <div class="campos">
+                <label for="">Email:</label>
+                <input type="text" required="required" name="email" maxlength="50">
+            </div>
+            <div class="campos">
+                <label for="">CPF:</label>
+                <input type="text" required="required" name="cpf" maxlength="11">
+            </div>
+            <div class="campos">
+                <label for="">Endereço:</label>
+                <input type="text" required="required" name="endereco" maxlength="28">
+            </div>
+            <div class="campos">
+                <label for="">Cidade:</label>
+                <input type="text" required="required" name="cidade">
+            </div>
+            <div class="campos">
+                <label for="estado">Estado:</label>
+                <select id="estado" required="required" name="estado"></select>
+            </div>
+            <div class="campos">
+                <input type="radio" name="moradia" value="casa"><span>Casa</span>
+                <input type="radio" name="moradia" value="apartamento"><span>apartamento</span>
+            </div>
+        </fieldset>
+        <fieldset>
+            <div class="campos">
+                <label for="">Resumo do currículo</label>
+                <textarea name="" id="" cols="30" rows="10" maxlength="1000" required="required"></textarea>
+            </div>
+            <div class="campos">
+                <label for="">Cargo:</label>
+                <input type="text" required="required" name="cargo" maxlength="40">
+            </div>
+            <div class="campos">
+                <label for="">Descrição do cargo</label>
+                <input type="text" required="required" name="descricao-cargo" maxlength="500">
+            </div>
+            <div class="campos">
+                <label>Data de início</label>
+                <input type="date" name="" id="">
+            </div>
+            <div class="campos">
+                <label>Data de inicio</label>
+                <input type="text" name="" id="">
+            </div>
+        </fieldset>
+</form>
+    <script src="script.js"></script>
+</body>
+</html>

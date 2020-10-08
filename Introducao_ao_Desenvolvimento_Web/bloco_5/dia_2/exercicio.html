@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width" />
+    <title>Exercício 5.2</title>
+    <style>
+      div {
+        border-color: black;
+        border-style: solid;
+      }
+
+      .title {
+        text-align: center;
+      }
+
+      .main-content {
+        background-color: yellow;
+      }
+
+      .main-content .center-content {
+        background-color: red;
+        width: 50%;
+        margin-left: auto;
+        margin-right: auto;
+      }
+
+      .main-content .center-content p {
+        font-style: italic;
+      }
+
+      .main-content .left-content {
+        background-color: green;
+        width: 60%;
+        margin-left: 0;
+        margin-right: auto;
+      }
+
+      .main-content .left-content .small-image {
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+        border-radius: 100%;
+      }
+
+      .main-content .right-content {
+        background-color: blue;
+        width: 60%;
+        margin-left: auto;
+        margin-right: 0;
+      }
+
+      .main-content .description {
+        text-align: center;
+      }
+    </style>
+  </head>
+  <body>
+    <script>
+        let body = document.body;
+        let titulo = document.createElement("h1");
+        titulo.innerText = "Exercicio 5.2 - JavaScript DOM"
+        body.appendChild(titulo)
+        
+        function criarDivBody(classe){
+            let div = document.createElement("div")
+            div.className = classe
+            body.appendChild(div)
+        }
+
+        criarDivBody("main-content");
+
+        let mainContent = document.querySelector("div.main-content");
+
+        function criarDivChildMainContent(classe){
+            let div = document.createElement("div"); 
+            div.className = classe
+            mainContent.appendChild(div)
+        }
+
+        criarDivChildMainContent("center-content");
+
+        let centerContent = document.querySelector("div.center-content");
+
+        function CriarPChildCenterContent(texto){
+            let p = document.createElement("p");
+            p.innerText = texto;
+            centerContent.appendChild(p);
+        }
+
+        CriarPChildCenterContent("Algum Texto");
+
+        criarDivBody("left-content");
+        criarDivBody("right-content");
+
+        let leftContent = document.querySelector("div.left-content");
+
+        function imageLeftContent(classe, src){
+            let img = document.createElement("img")
+            img.className = classe
+            img.src = src
+            leftContent.appendChild(img)
+        }
+
+        imageLeftContent("small-image", "https://picsum.photos/200");
+
+        let rightContent = document.querySelector("div.right-content");
+        let listaNaoOrdenada = document.createElement("ul")
+        rightContent.appendChild(listaNaoOrdenada);
+
+        function criarItensLista(nome){
+            let ul = document.querySelector(".right-content ul")
+            let itens = document.createElement("li");
+            itens.innerText = nome
+            ul.appendChild(itens);
+        }
+        
+        criarItensLista("um");
+        criarItensLista("dois");
+        criarItensLista("tres");
+        criarItensLista("quatro");
+        criarItensLista("cinco");
+        criarItensLista("seis");
+        criarItensLista("sete");
+        criarItensLista("oito");
+        criarItensLista("nove");
+        criarItensLista("dez");
+    
+        function criarSubTitulosH3(nome){
+            let h3 = document.querySelector("div.main-content");
+            let subTitulo = document.createElement("h3");
+            subTitulo.innerText = nome;
+            h3.appendChild(subTitulo)
+        }
+
+        criarSubTitulosH3("teste")
+        criarSubTitulosH3("teste2")
+        criarSubTitulosH3("teste3")
+
+        let tagH1 = document.querySelector("body h1");
+        tagH1.className = "title"
+
+        let tagH3 = document.querySelectorAll(".main-content h3");
+        for (index in tagH3){
+          tagH3[index].className = "description"
+        }
+
+        body.removeChild(leftContent);
+
+        rightContent.style.marginRight = "auto"
+
+        centerContent.style.backgroundColor = "green"
+
+        let ultimoFilho = listaNaoOrdenada.lastChild;
+        listaNaoOrdenada.removeChild(ultimoFilho);
+    
+    </script>
+  </body>
+</html>
